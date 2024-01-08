@@ -1,0 +1,119 @@
+/* ======= */
+/* General */
+/* ======= */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.degree-font-size {
+  font-size: 3.5rem;
+}
+
+/* ====== */
+/* NavBar */
+/* ====== */
+.logo-img {
+  width: 64px;
+  height: 38px;
+}
+
+.tagline-phrase {
+  font-size: 12px;
+}
+
+.nav-bar-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar-items li a {
+  padding: 0 1.2rem;
+  transition: 0.3s;
+}
+
+.nav-bar-items li a:hover {
+  color: #4e9bd9 !important;
+}
+
+#openBtn {
+  display: none;
+}
+
+/* ============== */
+/* Search-Section */
+/* ============== */
+.search-section {
+  height: 22rem;
+  background-image: url("../Imgs/banner.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.search-btn {
+  right: 0.4rem;
+}
+
+/* =============== */
+/* Degrees-Section */
+/* =============== */
+.degrees-section-content {
+  transform: translateY(-50%);
+}
+
+/* ====== */
+/* Footer */
+/* ====== */
+.footer-icon a {
+  height: 2.5rem;
+  width: 2.5rem;
+  transition: 0.3s;
+}
+
+.footer-icon a:hover {
+  color: #fff !important;
+  background-color: #4e9bd9 !important;
+}
+
+.subscribe-btn {
+  right: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+/* =========== */
+/* Media-Query */
+/* =========== */
+@media only screen and (max-width: 768px) {
+  .nav-bar-items {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+    z-index: 1000;
+    display: none;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .nav-bar-items li a {
+    padding: 1.2rem;
+  }
+
+  #openBtn {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .degrees-section-content {
+    transform: translateY(-15%);
+  }
+}

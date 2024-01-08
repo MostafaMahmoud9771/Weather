@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <section>
+      <nav class="px-3 py-4 bg-dark">
+        <div
+          class="container mx-auto d-flex justify-content-between align-items-center"
+        >
+          <div class="d-flex">
+            <a href="#" class="d-flex"
+              ><img src="./Imgs/logo.png" class="logo-img align-self-center"
+            /></a>
+            <div class="px-2 text-white text-center">
+              <h1 class="fs-5 fw-bold m-0">Weather</h1>
+              <p class="m-0">
+                <a
+                  href="#"
+                  class="text-decoration-none text-white text-center tagline-phrase"
+                  >tagline goes here</a
+                >
+              </p>
+            </div>
+          </div>
+          <ul id="navBarItem" class="list-unstyled nav-bar-items m-0">
+            <li>
+              <a
+                href="./index.html"
+                class="fw-bold text-decoration-none text-white d-block"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="fw-bold text-decoration-none text-white d-block"
+                >News</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="fw-bold text-decoration-none text-white d-block"
+                >Live Cameras</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="fw-bold text-decoration-none text-white d-block"
+                >Photos</a
+              >
+            </li>
+            <li>
+              <a
+                href="./contact.html"
+                class="fw-bold text-decoration-none text-white d-block"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div id="openBtn">
+            <i class="fa-solid fa-bars text-white fs-2"></i>
+          </div>
+          <div id="closeBtn" class="d-none">
+            <i class="fa-solid fa-xmark text-white fs-2"></i>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="search-section py-5">
+      <div class="container mx-auto">
+        <div class="rounded-pill position-relative">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Find your location..."
+            class="form-control p-3 rounded-pill"
+          />
+          <button
+            id="searchBtn"
+            class="search-btn text-white btn btn-info rounded-pill btn-lg px-4 position-absolute top-50 translate-middle-y trans"
+          >
+            Find
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="degrees-section bg-black py-5">
+      <div class="degrees-section-content container mx-auto position-relative">
+        <div class="row rounded-4 overflow-hidden">
+          <div class="col-lg-4 bg-secondary text-white px-3 py-4">
+            <p id="dayName" class="fs-2 fw-bold text-info text-center"></p>
+            <p id="dayDate" class="fs-2 fw-bold text-info text-center"></p>
+            <div>
+              <p id="cityName" class="fs-4 fw-bold"></p>
+              <div class="d-flex justify-content-around align-items-center">
+                <p id="dayTemp" class="degree-font-size fw-bold"></p>
+                <img id="dayConditionIcon" src="" width="64px" height="64px" />
+              </div>
+              <p id="dayCondition" class="fs-5 text-info fw-bold"></p>
+            </div>
+            <div class="d-flex justify-content-between fs-5 fw-bold">
+              <p>
+                <i class="fa-solid fa-umbrella"></i>
+                <span id="humidity"></span>%
+              </p>
+              <p>
+                <i class="fa-solid fa-wind"></i>
+                <span id="windSpeed"></span>km/h
+              </p>
+              <p>
+                <i class="fa-solid fa-compass"></i>
+                <span id="windDirection"></span>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 bg-dark text-white px-3 py-4 text-center">
+            <p id="forecast1" class="fs-2 fw-bold text-info"></p>
+            <p id="forecast1Date" class="fs-2 fw-bold text-info"></p>
+            <img
+              id="forecast1ConditionIcon"
+              src=""
+              width="64px"
+              height="64px"
+            />
+            <p id="forecast1Max" class="degree-font-size fw-bold"></p>
+            <p id="forecast1Min" class="fs-3 fw-bold"></p>
+            <p id="forecast1Condition" class="fs-5 text-info fw-bold"></p>
+          </div>
+          <div class="col-lg-4 bg-secondary text-white px-3 py-4 text-center">
+            <p id="forecast2" class="fs-2 fw-bold text-info"></p>
+            <p id="forecast2Date" class="fs-2 fw-bold text-info"></p>
+            <img
+              id="forecast2ConditionIcon"
+              src=""
+              width="64px"
+              height="64px"
+            />
+            <p id="forecast2Max" class="degree-font-size fw-bold"></p>
+            <p id="forecast2Min" class="fs-3 fw-bold"></p>
+            <p id="forecast2Condition" class="fs-5 text-info fw-bold"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark py-5">
+      <div class="container mx-auto row gy-4">
+        <div class="rounded-pill position-relative col-lg-8">
+          <input
+            type="text"
+            placeholder="Enter your email to subscribe..."
+            class="form-control p-3 rounded-pill"
+          />
+          <button
+            class="subscribe-btn text-white btn btn-info rounded-pill btn-lg px-4 position-absolute top-50 translate-middle-y trans"
+          >
+            Subscribe
+          </button>
+        </div>
+        <div class="d-flex col-lg-4 justify-content-center align-items-center">
+          <div class="footer-icon mx-1 rounded-circle overflow-hidden">
+            <a
+              href="#"
+              class="d-block text-info fs-4 bg-black p-2 d-flex justify-content-center align-items-center"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </div>
+          <div class="footer-icon mx-1 rounded-circle overflow-hidden">
+            <a
+              href="#"
+              class="d-block text-info fs-4 bg-black p-2 d-flex justify-content-center align-items-center"
+              ><i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+          <div class="footer-icon mx-1 rounded-circle overflow-hidden">
+            <a
+              href="#"
+              class="d-block text-info fs-4 bg-black p-2 d-flex justify-content-center align-items-center"
+              ><i class="fa-brands fa-google-plus-g"></i>
+            </a>
+          </div>
+          <div class="footer-icon mx-1 rounded-circle overflow-hidden">
+            <a
+              href="#"
+              class="d-block text-info fs-4 bg-black p-2 d-flex justify-content-center align-items-center"
+              ><i class="fa-brands fa-pinterest"></i>
+            </a>
+          </div>
+        </div>
+        <p class="fs-6 text-white text-center fw-bold pt-3">
+          Copyright 2014 Company name. Designed by Themezy. All rights reserved
+        </p>
+      </div>
+    </footer>
+    <script src="./Scripts/all.min.js"></script>
+    <script src="./Scripts/bootstrap.bundle.min.js"></script>
+    <script src="./Scripts/main.js"></script>
+  </body>
+</html>
